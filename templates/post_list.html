@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>POST</title>
+</head>
+<body>
+
+<h2>Posts</h2>
+<a href="{% url 'post-create' %}">Create New Post</a>
+<ul>
+  {% for post in posts %}
+    <li>
+      <strong>{{ post.title }}</strong> by {{ post.author }}<br>
+      <a href="{% url 'post-detail' post.id %}">View</a>
+    </li>
+  {% endfor %}
+</ul>
+
+{% if posts.has_next %}
+  <a href="?page={{ posts.next_page_number }}">Next</a>
+{% endif %}
+</body>
+</html>
