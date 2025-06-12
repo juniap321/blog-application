@@ -11,8 +11,7 @@ This is a Django REST Framework-based project that provides a simple blogging AP
 
  ## Setup Instructions
  1. Clone the Repository
-
-    git clone <repository-url>
+    git clone (https://github.com/juniap321/blog-application.git)
     cd Blog
 
 
@@ -20,18 +19,15 @@ This is a Django REST Framework-based project that provides a simple blogging AP
     ## Authentication (JWT)
     POST /api/token/ – Obtain JWT access and refresh tokens
 
-   User Registration
-   POST /register/ – Register a new user
+    ## User Registration
+    POST /register/ – Register a new user
 
-   Posts
-   GET /posts/ – List all posts (paginated)
-   POST /posts/ – Create a new post
+    ## Posts
+    GET /posts/ – List all posts (paginated)
+    POST /posts/ – Create a new post
+    GET /postdetails/<int:pk>/ – Get a post's details 
+    DELETE /postdetails/<int:pk>/ – Delete a post (only by the author)
 
-   GET /postdetails/<int:pk>/ – Get a post's details 
-
-   DELETE /postdetails/<int:pk>/ – Delete a post (only by the author)
-
-   Comments
-   POST /commentcreate/<int:post_id>/comment/ – Add a comment to a post
-
-   GET /commentcreate/<int:post_id>/comment/ – Get comments on a post  
+    ## Comments
+    POST /commentcreate/<int:post_id>/comment/ – Add a comment to a post
+    GET /commentcreate/<int:post_id>/comment/ – Get comments on a post  
